@@ -1,0 +1,30 @@
+<div class="modal-body">
+  <table class="table table-borderless">
+    <tr>
+      <th>Name</th>
+      <th>:</th>
+      <td><%= user.name %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>:</th>
+      <td><%= user.email %></td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <th>:</th>
+      <td><%= user.address %></td>
+    </tr>
+    <tr>
+      <th>Contact</th>
+      <th>:</th>
+      <td><%= user.contact %></td>
+    </tr>
+  </table>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-info', data: { bs_toggle: 'modal', bs_target: '#editUserModal', remote: true } %>
+</div>
+
+
