@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-<%= link_to 'New User', new_user_path, class: 'btn btn-info my-3', data: { bs_toggle: 'modal', bs_target: '#exampleModal', remote: true } %>
+<%= link_to 'New User', new_user_path, class: 'btn btn-info my-3', data: { bs_toggle: 'modal', bs_target: '#newUserModal', remote: true } %>
 <table class="table table-striped">
   <thead class="bg-info">
     <tr>
@@ -9,7 +9,7 @@
       <th>Email</th>
       <th>Address</th>
       <th>Contact</th>
-      <th><%= link_to 'New User', new_user_path, style: 'text-decoration:none;',data: { bs_toggle: 'modal', bs_target: '#exampleModal', remote: true }  %></th>
+      <th><%= link_to 'New User', new_user_path, style: 'text-decoration:none;',data: { bs_toggle: 'modal', bs_target: '#newUserModal', remote: true }  %></th>
     </tr>
   </thead>
 
@@ -19,21 +19,30 @@
     <% end %>
   </tbody>
 </table>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- New User Modal -->
+<div class="modal fade" id="newUserModal" tabindex="-1" aria-labelledby="newUserModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">New User</h1>
+        <h1 class="modal-title fs-5" id="newUserModalLabel">New User</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="userForm">
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Edit User Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editUserModalLabel">New User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editUserForm">
       </div>
     </div>
   </div>
